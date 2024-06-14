@@ -1,0 +1,63 @@
+<html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food/NonFood predictor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .images {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .images div {
+            margin: 0 10px;
+        }
+        .result {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Food/NonFood predictor</h1>
+    <form id="uploadForm" action="/predict" method="post" enctype="multipart/form-data">
+        <input type="file" id="file1" name="file1" accept="image/*" required>
+        <br><br>
+        <button type="submit">Predict</button>
+    </form>
+    <div class="image">
+        <div>
+            <img id="image1" src="" alt="Image" width="200" height="200" />
+        </div>
+    </div>
+    <div class="result">
+        <p id="result">Prediction Result: </p>
+    </div>
+
+    <script>
+        document.getElementById('file1').addEventListener('change', function() {
+            const file = this.files[0];
+            document.getElementById('image1').src = URL.createObjectURL(file);
+        });
+
+        document.getElementById("uploadForm").onsubmit = async function(event) {
+            event.preventDefault();
+
+            const formData = new FormData(this);
+            const response = await fetch("/predict", {
+                method: "POST",
+                body: formData,
+            });
+
+            const result = await response.json();
+            document.getElementById("result").textContent = `Prediction Result: ${result.prediction}`;
+        };
+    </script>
+</body>
+</html>

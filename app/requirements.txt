@@ -1,0 +1,6 @@
+flask
+prometheus_flask_exporter
+numpy
+torch
+Pillow
+torchvision
