@@ -11,6 +11,14 @@ grafana - дашборд Графаны
 prometeus - конфиг прометеуса (но сам он вызывается в скрипте приложения)    
 
 ## Несколько картинок
-![image](https://github.com/Xairete/otus_mlops_final_project/assets/46996898/213f7743-b3bf-444e-8eab-150c40408cf8)
-![image](https://github.com/Xairete/otus_mlops_final_project/assets/46996898/cff2fb4a-f1d0-4ac2-8bd5-5b5607533e2d)
-![image](https://github.com/Xairete/otus_mlops_final_project/assets/46996898/a501ce12-9113-4879-aec7-2a40006fed18)
+Схема сервиса  
+![image](https://github.com/Xairete/MLOps_final/assets/46996898/786ebd22-da8b-4ce8-a9c2-808befa630d8)
+
+Внешний вид интерфейса  
+![image](https://github.com/Xairete/MLOps_final/assets/46996898/b4e702e5-5e31-4ba4-bbff-3725481e324c)  
+
+![image](https://github.com/Xairete/MLOps_final/assets/46996898/dccf0298-61f2-4f2c-a9bd-21001394894a)
+
+![image](https://github.com/Xairete/MLOps_final/assets/46996898/e20bf5f6-35ba-41fa-8e35-95b1fd388196)
+
+
